@@ -1,7 +1,7 @@
 # Lift Demo
 
 ```bash
-$ npm install -g lift-prototype
+$ npm install -g @prisma/prototype
 $ prisma2 lift create --name 'init'
 $ prisma2 lift up
 
