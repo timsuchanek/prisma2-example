@@ -9,7 +9,7 @@ model Blog {
 model Author {
   id: Int @id
   name: String?
-  authors: Blog[]
+  posts: Post[]
 }         
 
 model Post {
