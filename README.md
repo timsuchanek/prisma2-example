@@ -1,6 +1,6 @@
 # Prisma 2 Demo
 
-This repository contains a first usable demo of Prisma 2.
+This repository contains a first usable demo of Prisma 2. If you're running into any issues with the demo, please [open an issue in this repo](https://github.com/prisma/lift-demo/issues/new).
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ You can now use the Prisma 2 CLI using the `prisma2` command.
 
 #### 2. Migrate the database
 
-With Prisma 2, database migrations are performed using the `lift` subcommand of the Prisma CLI, i.e. `prisma lift <command>`.
+With Prisma 2, database migrations are performed using the `lift` subcommand of the Prisma CLI, i.e. `prisma2 lift <command>`.
 
 ##### 2.1. Create migration
 
