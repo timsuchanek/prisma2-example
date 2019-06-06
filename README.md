@@ -4,6 +4,15 @@ This repository contains a first usable demo of Prisma 2. If you're running into
 
 ## Getting Started
 
+#### 0. Clone the repo
+
+Clone this repository:
+
+```
+git clone git@github.com:prisma/prisma2-demo.git
+cd prisma2-demo
+```
+
 #### 1. Install the Prisma 2 CLI
 
 ```bash

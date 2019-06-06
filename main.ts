@@ -9,9 +9,9 @@ async function main() {
     {
       data: {
         name: 'Photon Blog',
-        // viewCount: 5,
+        viewCount: 5,
       },
-    } as any /* to enable TypeScript, remove this any */,
+    } 
   )
 
   console.log(result)
