@@ -139,7 +139,7 @@ Returns a single object identified by a _unique_ value (e.g. `id` or `email`). Y
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
 | `where` | `UserWhereUniqueInput` | **Yes** | Wraps all _unique_ fields of a model so that individual records can be selected. |
-| `select` | `UserSelect` | No | Specify which fields to include in the [selection set](#selection-sets). |
+| `select` | `UserSelect` | No | Specifies which fields to include in the [selection set](#selection-sets). |
 
 #### Examples
 
@@ -164,7 +164,7 @@ Returns a list of objects. The list can be altered using _pagination_, _filterin
 | `before` | `string` | No | Specifies the last object for the list (the value typically specifies an `id` or another unique value). |
 | `first` | `number` | No | Specifies how many elements should be returned in the list (as seen from the _beginning_ of the list). |
 | `last` | `number` | No | Specifies how many elements should be returned in the list (as seen from the _end_ of the list). |
-| `select` | `UserSelect` | No | Specify which fields to include in the [selection set](#selection-sets). |
+| `select` | `UserSelect` | No | Specifies which fields to include in the [selection set](#selection-sets). |
 
 #### Examples
 
@@ -182,25 +182,114 @@ Creates a new record and returns the corresponding object. You can use the `sele
 
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| `data` |  `UserCreateInput` | **Yes** | Wraps all the fields of the model so that they can be provided when creating new records. It also includes relation fields which lets you perform (transactional) nested inserts. Fields that are marked as optional or have default values in the datamodel are optional on `data`.
-| `select` | `UserSelect` | No | Specify which fields to include in the [selection set](#selection-sets). |
+| `data` |  `UserCreateInput` | **Yes** | Wraps all the fields of the model so that they can be provided when creating new records. It also includes relation fields which lets you perform (transactional) nested inserts. Fields that are marked as optional or have default values in the datamodel are optional on `data`. |
+| `select` | `UserSelect` | No | Specifies which fields to include in the [selection set](#selection-sets). |
+
+#### Examples
+
+```ts
+const user = await photon.users.create({
+  data: { name: "Alice" }
+})
+```
 
 ### `update`
 
 Updates an existing record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object.
 
+#### Options
+
+| Name | Type | Required | Description |
+| --- | --- | --- | --- |
+| `data` |  `UserUpdateInput` | **Yes** | Wraps all the fields of the model so that they can be provided when updating an existing record. Fields that are marked as optional or have default values in the datamodel are optional on `data`. |
+| `where` | `UserWhereUniqueInput` | **Yes** | Wraps all _unique_ fields of a model so that individual records can be selected. |
+| `select` | `UserSelect` | No | Specifies which fields to include in the [selection set](#selection-sets). |
+
+#### Examples
+
+```ts
+const user = await photon.users.update({
+  where: { id: 1 },
+  data: { name: "ALICE" }
+})
+```
+
 ### `updateMany`
 
 Updates a batch of existing records in bulk and returns the number of updated records.
+
+#### Options
+
+| Name | Type | Required | Description |
+| --- | --- | --- | --- |
+| `data` |  `UserUpdateManyMutationInput` | **Yes** | Wraps all the fields of the model so that they can be provided when updating an existing record. Fields that are marked as optional or have default values in the datamodel are optional on `data`. |
+| `where` | `UserWhereInput` | No | Wraps _all_ fields of a model so that the list can be filtered by any model property. |
+
+#### Examples
+
+```ts
+const user = await photon.users.updateMany({
+  where: { name: "Alice" },
+  data: { name: "ALICE" }
+})
+```
 
 ### `upsert`
 
 Updates an existing or creates a new record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object. 
 
+#### Options
+
+| Name | Type | Required | Description |
+| --- | --- | --- | --- |
+| `create` |  `UserCreateInput` | **Yes** | Wraps all the fields of the model so that they can be provided when creating new records. It also includes relation fields which lets you perform (transactional) nested inserts. Fields that are marked as optional or have default values in the datamodel are optional on `data`. |
+| `update` |  `UserUpdateInput` | **Yes** | Wraps all the fields of the model so that they can be provided when updating an existing record. Fields that are marked as optional or have default values in the datamodel are optional on `data`. |
+| `where` | `UserWhereUniqueInput` | **Yes** | Wraps all _unique_ fields of a model so that individual records can be selected. |
+| `select` | `UserSelect` | No | Specifies which fields to include in the [selection set](#selection-sets). |
+
+#### Examples
+
+```ts
+const user = await photon.users.upsert({
+  where: { id: 1 },
+  update: { name: "ALICE" }
+  create: { name: "ALICE" }
+})
+```
+
 ### `delete`
 
 Deletes an existing record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object.
 
+#### Options
+
+| Name | Type | Required | Description |
+| --- | --- | --- | --- |
+| `where` | `UserWhereUniqueInput` | **Yes** | Wraps all _unique_ fields of a model so that individual records can be selected. |
+| `select` | `UserSelect` | No | Specifies which fields to include in the [selection set](#selection-sets). |
+
+#### Examples
+
+```ts
+const user = await photon.users.delete({
+  where: { id: 1 },
+})
+```
+
 ### `deleteMany`
 
 Deletes a batch of existing records in bulk and returns the number of deleted records.
+
+#### Options
+
+| Name | Type | Required | Description |
+| --- | --- | --- | --- |
+| `where` | `UserWhereInput` | No | Wraps _all_ fields of a model so that the list can be filtered by any model property. |
+
+#### Examples
+
+```ts
+const user = await photon.users.deleteMany({
+  where: { name: "Alice" },
+})
+```
