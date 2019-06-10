@@ -9,7 +9,7 @@ This repository contains a first usable demo of Prisma 2. If you're running into
 Clone this repository:
 
 ```
-git clone git@github.com:prisma/prisma2-demo.git
+git clone git@github.com:prisma/next.git
 cd prisma2-demo
 ```
 
