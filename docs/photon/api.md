@@ -134,14 +134,14 @@ For simplicity, we're assuming the `User` model from above as foundation for the
 
 Returns a single object identified by a _unique_ value (e.g. `id` or `email`). You can use the `select` and `include` arguments to determine which fields should be included on the returned object.
 
-#### Arguments
+#### Options
 
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| `where` | `UserWhereUniqueInput` | Yes | Encapsulates all _unique_ fields of a model so that individual records can be selected. |
-| `select` | `UserSelect` | No | Encapsulates all _unique_ fields of a model so that individual records can be selected. |
+| `where` | `UserWhereUniqueInput` | **Yes** | Wraps all _unique_ fields of a model so that individual records can be selected. |
+| `select` | `UserSelect` | No | Specify which fields to include in the [selection set](#selection-sets). |
 
-##### Examples
+#### Examples
 
 ```ts
 const user = await photon.users.findOne({
@@ -152,6 +152,27 @@ const user = await photon.users.findOne({
 ### `findMany`
 
 Returns a list of objects. The list can be altered using _pagination_, _filtering_ and _ordering_ arguments. You can use the `select` and `include` arguments to determine which fields should be included on each object in the returned list.
+
+#### Options
+
+| Name | Type | Required | Description |
+| --- | --- | --- | --- |
+| `where` | `UserWhereInput` | No | Wraps _all_ fields of a model so that the list can be filtered by any model property. |
+| `orderBy` | `UserOrderByInput` | No | Lets you order the returned list by any model property. |
+| `skip` | `string` | No | Specifies how many of the returned objects in the list should be skipped. |
+| `after` | `string` | No | Specifies the starting object for the list (the value typically specifies an `id` or another unique value). |
+| `before` | `string` | No | Specifies the last object for the list (the value typically specifies an `id` or another unique value). |
+| `first` | `number` | No | Specifies how many elements should be returned in the list (as seen from the _beginning_ of the list). |
+| `last` | `number` | No | Specifies how many elements should be returned in the list (as seen from the _end_ of the list). |
+| `select` | `UserSelect` | No | Specify which fields to include in the [selection set](#selection-sets). |
+
+#### Examples
+
+```ts
+const user = await photon.users.findMany({
+  where: { name: "Alice" }
+})
+```
 
 ### `create`
 
