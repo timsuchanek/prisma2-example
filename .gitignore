@@ -1,3 +1,4 @@
 migrations
 db/*.db
 node_modules
+.DS_Store

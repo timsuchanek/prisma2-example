@@ -1,19 +1,25 @@
 # Prisma 2 Demo
 
-This repository contains a first usable demo of Prisma 2. If you're running into any issues with the demo, please [open an issue in this repo](https://github.com/prisma/lift-demo/issues/new).
+This repository contains a first usable demo of Prisma 2. If you're running into any issues with the demo, please [open an issue in this repo](https://github.com/prisma/next/issues/new).
 
-## Getting Started
+## Getting started
 
-#### 0. Clone the repo
+Follow the steps below to get started with a premade example that uses **Photon JS and Lift with SQLite** (recommended) or choose one of the following paths:
+
+- Connect your own MySQL or PostreSQL database (requires DB credentials)
+- Use only Lift (for database migrations)
+- Use only Photon (for type-safe database access (ORM))
+
+#### 1. Clone the repo
 
 Clone this repository:
 
 ```
 git clone git@github.com:prisma/next.git
-cd prisma2-demo
+cd next
 ```
 
-#### 1. Install the Prisma 2 CLI
+#### 2. Install the Prisma 2 CLI
 
 ```bash
 npm install -g @prisma/prototype
@@ -21,11 +27,11 @@ npm install -g @prisma/prototype
 
 You can now use the Prisma 2 CLI using the `prisma2` command.
 
-#### 2. Migrate the database
+#### 3. Migrate the database
 
 With Prisma 2, database migrations are performed using the `lift` subcommand of the Prisma CLI, i.e. `prisma2 lift <command>`.
 
-##### 2.1. Create migration
+##### 3.1. Create migration
 
 Run the following command to create a new migration:
 
@@ -41,7 +47,7 @@ Every migration is represented via its own directory inside the `migrations` dir
 - `steps.json`: A summary of all the required steps to perform the migration.
 - `README.md`: A markdown file highlighting important information about the migration (e.g. a diff of the datamodel or the performed SQL statements).
 
-##### 2.2. Execute migration
+##### 3.2. Execute migration
 
 To actually execute the migration against your database, run:
 
@@ -51,7 +57,7 @@ prisma2 lift up
 
 This applies the steps specified in `steps.json` and therefore migrates the database schema to match the datamodel. 
 
-#### 3. Generate Photon
+#### 4. Generate Photon
 
 Photon is the new name of the Prisma client. You can generate it via the `prisma2 generate` command:
 
@@ -63,7 +69,7 @@ You can now import Photon with `import { Photon } from '@generated/photon'`.
 
 > In contrast to Prisma 1, the generated Photon library will be located inside `node_modules/@generated` instead of a configurable location.
 
-#### 4. Install dependencies
+#### 5. Install dependencies
 
 Install Node depencies:
 
@@ -73,7 +79,7 @@ npm install
 
 > Note that the Photon generation is included in an [`install`](./package.json#L16) script in your [`package.json`](./package.json), which means Photon also gets (re-)generated upon each `npm install`.  
 
-#### 5. Run the script
+#### 6. Run the script
 
 Run the following command to execute the script:
 
