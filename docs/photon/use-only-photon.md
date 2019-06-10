@@ -27,7 +27,7 @@ Then follow the interactive prompt:
   - MySQL
   - PostgreSQL
   - MongoDB (coming soon)
-2. Provide your database credentials (more info below)
+2. Provide your database credentials ([more info](#database-credentials))
 3. Select the database (MySQL, MongoDB) or schema (PostgreSQL) to introspect
 4. Select **Only Photon**
 6. Select your programming language
@@ -40,13 +40,15 @@ Then follow the interactive prompt:
   - REST
   - gRPC
 
-<Details><Summary>Database credentials for SQLite</Summary>
+## Database credentials
+
+<Details><Summary>Database credentials for <strong>SQLite</strong></Summary>
 
 When using SQLite, you need to provide the _file path_ to your existing SQLite database file.
 
 </Details>
 
-<Details><Summary>Database credentials for MySQL</Summary>
+<Details><Summary>Database credentials for <strong>MySQL</strong></Summary>
 
 When using MySQL, you need to provide the following infomration to connect your existing MySQL database server:
 
@@ -60,7 +62,7 @@ Once provided, the CLI will prompt you to select one of the existing **databases
 
 </Details>
 
-<Details><Summary>Database credentials for PostgreSQL</Summary>
+<Details><Summary>Database credentials for <strong>PostgreSQL</strong></Summary>
 
 When using PostgreSQL, you need to provide the following infomration to connect your existing MySQL database server:
 
@@ -75,7 +77,7 @@ Once provided, the CLI will prompt you to select one of the existing **databases
 
 </Details>
 
-<Details><Summary>Database credentials for MongoDB</Summary>
+<Details><Summary>Database credentials for <strong>MongoDB</strong></Summary>
 
 When using MongoDB, you need to provide your [MongoDB connection string](https://docs.mongodb.com/manual/reference/connection-string), e.g. `http://user1:myPassword@localhost:27017/admin`. Note that this must include the database credentials as well as the [`authSource`](https://docs.mongodb.com/manual/reference/connection-string/#authentication-options) database that's storing the credentials of your MongoDB `admin` user (by default it is often called `admin`).
 
