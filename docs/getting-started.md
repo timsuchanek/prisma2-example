@@ -7,7 +7,6 @@ npm install -g prisma2
 prisma2 init hello-prisma
 ```
 
-
 ## The `prisma init` flow
 
 ### 1. Database selection 
