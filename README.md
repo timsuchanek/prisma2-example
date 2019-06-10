@@ -6,9 +6,9 @@ This repository contains a first usable demo of Prisma 2. If you're running into
 
 Follow the steps below to get started with a premade example that uses **Photon JS and Lift with SQLite** (recommended) or choose one of the following paths:
 
-- Connect your own MySQL or PostreSQL database (requires DB credentials)
-- Use only Lift (for database migrations)
-- Use only Photon (for type-safe database access (ORM))
+- [Connect your own MySQL or PostreSQL database](./docs/tutorial.md) (requires DB credentials)
+- [Use only Lift](./docs/lift/use-only-lift.md) (for database migrations)
+- [Use only Photon](./docs/photon/use-only-photon.md) (for type-safe database access (ORM))
 
 #### 1. Clone the repo
 
