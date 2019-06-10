@@ -5,14 +5,9 @@ const photon = new Photon()
 async function main() {
   await photon.connect()
 
-  const result = await photon.blogs.create(
-    {
-      data: {
-        name: 'Photon Blog',
-        viewCount: 5,
-      },
-    } 
-  )
+  const result = await photon.users.findOne({
+    where: { id: 1 }
+  })
 
   console.log(result)
   photon.close()
