@@ -11,7 +11,7 @@ Using Photon typically follows this high-level workflow:
 
 Your `Photon` instance can then be imported from `node_modules/@generated`. 
 
-Assume you have the following simple datamodel:
+Assume you have the following datamodel:
 
 ```groovy
 model User {
@@ -65,11 +65,13 @@ async function main() {
 
 ### Field selection
 
-#### Selection set
+This section explains how to predict and control which fields of a model are returned in a Photon API call.
+
+#### Selection sets
 
 To understand which fields are being returned by a certain API call, you need to be aware of its **selection set**. 
 
-The selection set defines the **set of fields on a model instance that is returned in a Photon API call**. 
+The selection set defines the **set of fields on a model instance that is returned in a Photon API call**.
 
 For example, in the `findOne` API call from above, the selection set includes the `id`, `name` and `role` fields of the model `User`. In that example, the selection set has not been manipulated and the API call therefore returns the _default selection set_ which includes all _scalar_ fields of an object.
 
@@ -91,7 +93,7 @@ There are two ways how the _default selection set_ can be manipulated to specify
 
 ##### Select exclusively via `select`
 
-In this example, we're using `select` to exclusivly select the `name` field of the returned `User` object:
+In this example, we're using `select` to exclusively select the `name` field of the returned `User` object:
 
 ```ts
 const result = await photon.users.findOne({
@@ -126,12 +128,44 @@ Coming soon.
 
 ## API reference
 
-
-
 ## Read
+
+### `findOne`
+
+Returns a single object identified by a _unique_ value (e.g. `id` or `email`). You can use the `select` and `include` arguments to determine which fields should be included on the returned object.
+
+### `findMany`
+
+Returns a list of objects. The list can be altered using _pagination_, _filtering_ and _ordering_ arguments. You can use the `select` and `include` arguments to determine which fields should be included on each object in the returned list.
 
 ## Create
 
+### `create`
+
+Creates a new record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object. `create` also lets you perform transactional _nested inserts_ (e.g. create a new `User` and `Post` in the same API call).
+
 ## Update
 
+### `update`
+
+Updates an existing record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object.
+
+### `updateMany`
+
+Updates a batch of existing records in bulk and returns the number of updated records.
+
+## Upsert
+
+### `upsert`
+
+Updates an existing or creates a new record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object. 
+
 ## Delete
+
+### `delete`
+
+Deletes an existing record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object.
+
+### `deleteMany`
+
+Deletes a batch of existing records in bulk and returns the number of deleted records.
