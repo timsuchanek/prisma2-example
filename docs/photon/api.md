@@ -228,7 +228,7 @@ Updates a batch of existing records in bulk and returns the number of updated re
 #### Examples
 
 ```ts
-const user = await photon.users.updateMany({
+const updatedUserCount = await photon.users.updateMany({
   where: { name: "Alice" },
   data: { name: "ALICE" }
 })
@@ -289,7 +289,7 @@ Deletes a batch of existing records in bulk and returns the number of deleted re
 #### Examples
 
 ```ts
-const user = await photon.users.deleteMany({
+const deletedUserCount = await photon.users.deleteMany({
   where: { name: "Alice" },
 })
 ```
