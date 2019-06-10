@@ -178,6 +178,13 @@ const user = await photon.users.findMany({
 
 Creates a new record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object. `create` also lets you perform transactional _nested inserts_ (e.g. create a new `User` and `Post` in the same API call).
 
+#### Options
+
+| Name | Type | Required | Description |
+| --- | --- | --- | --- |
+| `data` |  `UserCreateInput` | **Yes** | Wraps all the fields of the model so that they can be provided when creating new records. It also includes relation fields which lets you perform (transactional) nested inserts. Fields that are marked as optional or have default values in the datamodel are optional on `data`.
+| `select` | `UserSelect` | No | Specify which fields to include in the [selection set](#selection-sets). |
+
 ### `update`
 
 Updates an existing record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object.
