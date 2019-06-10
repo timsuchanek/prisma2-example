@@ -37,16 +37,16 @@ enum Role {
 
 Your generated Photon API will expose the following CRUD operations for the `User` and `Post` models:
 
-- `findOne`
-- `findMany`
-- `create`
-- `update`
-- `updateMany`
-- `upsert`
-- `delete`
-- `deleteMany`
+- [`findOne`](#findOne)
+- [`findMany`](#findMany)
+- [`create`](#create)
+- [`update`](#update)
+- [`updateMany`](#updateMany)
+- [`upsert`](#upsert)
+- [`delete`](#delete)
+- [`deleteMany`](#deleteMany)
 
-You can access each function via the respective model property on your generated `Photon` instance:
+You can access each function via the respective model property on your generated `Photon` instance, e.g. `users` for the `User` model:
 
 ```ts
 import { Photon } from '@generated/photon'
@@ -128,23 +128,34 @@ Coming soon.
 
 ## API reference
 
-## Read
+For simplicity, we're assuming the `User` model from above as foundation for the generated code.
 
 ### `findOne`
 
 Returns a single object identified by a _unique_ value (e.g. `id` or `email`). You can use the `select` and `include` arguments to determine which fields should be included on the returned object.
 
+#### Arguments
+
+| Name | Type | Required | Description |
+| --- | --- | --- | --- |
+| `where` | `UserWhereUniqueInput` | Yes | Encapsulates all _unique_ fields of a model so that individual records can be selected. |
+| `select` | `UserSelect` | No | Encapsulates all _unique_ fields of a model so that individual records can be selected. |
+
+##### Examples
+
+```ts
+const user = await photon.users.findOne({
+  where: { id: 1 }
+})
+```
+
 ### `findMany`
 
 Returns a list of objects. The list can be altered using _pagination_, _filtering_ and _ordering_ arguments. You can use the `select` and `include` arguments to determine which fields should be included on each object in the returned list.
 
-## Create
-
 ### `create`
 
 Creates a new record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object. `create` also lets you perform transactional _nested inserts_ (e.g. create a new `User` and `Post` in the same API call).
-
-## Update
 
 ### `update`
 
@@ -154,13 +165,9 @@ Updates an existing record and returns the corresponding object. You can use the
 
 Updates a batch of existing records in bulk and returns the number of updated records.
 
-## Upsert
-
 ### `upsert`
 
 Updates an existing or creates a new record and returns the corresponding object. You can use the `select` and `include` arguments to determine which fields should be included on the returned object. 
-
-## Delete
 
 ### `delete`
 

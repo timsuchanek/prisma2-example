@@ -18,3 +18,4 @@ model Post {
   title: String
   tags: String[]
   blog: Blog
+}
