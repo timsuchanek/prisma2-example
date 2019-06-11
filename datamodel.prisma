@@ -1,3 +1,8 @@
+source my_db {
+  type = "sqlite"
+  url  = "file:db/migration_engine.db"
+}
+
 model Blog {
   id: Int @id
   name: String
