@@ -25,22 +25,22 @@ prisma init hello-world
 Then follow the interactive prompt:
 
 1. Select your database type
-  - **SQLite**
-  - **MySQL**
-  - **PostgreSQL**
-  - MongoDB (coming soon)
+    - **SQLite**
+    - **MySQL**
+    - **PostgreSQL**
+    - MongoDB (coming soon)
 2. Provide your database credentials ([more info](#database-credentials))
 3. Select the database (MySQL, MongoDB) or schema (PostgreSQL) to introspect
 4. Select **Only Photon**
 6. Select your programming language
-  - **JavaScript**
-  - **TypeScript**
-  - **Go**
+    - **JavaScript**
+    - **TypeScript**
+    - **Go**
 7. Select a boilerplate to get started
-  - **From scratch**
-  - **GraphQL**
-  - **REST**
-  - **gRPC**
+    - **From scratch**
+    - **GraphQL**
+    - **REST**
+    - **gRPC**
 
 Once you're done with the interactive prompt, the CLI sets out for 3 major tasks:
 
