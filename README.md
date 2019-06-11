@@ -22,7 +22,7 @@ cd next
 #### 2. Install the Prisma 2 CLI
 
 ```bash
-npm install -g @prisma/prototype
+npm install -g prisma2
 ```
 
 You can now use the Prisma 2 CLI using the `prisma2` command.
