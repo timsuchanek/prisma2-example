@@ -44,9 +44,9 @@ Then follow the interactive prompt:
 
 Once you're done with the interactive prompt, the CLI sets out for 3 major tasks:
 
-1. Introspect your database schema
-1. Generate a Prisma datamodel based on the introspection
-1. Generate the Photon API in your selected language
+1. Introspecting your database schema
+1. Generating a Prisma datamodel based on the introspection
+1. Generating the Photon API in your selected language
 
 Plus, if you've selected a boilerplate to get started, it downloads the boilerplate code and configures it to connect to your database and match the generated datamodel.
 
