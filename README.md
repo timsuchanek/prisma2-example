@@ -39,7 +39,7 @@ Run the following command to create a new migration:
 prisma2 lift create --name 'init'
 ```
 
-This creates a new directory called `migrations`. This directory stores detailled info about each migration you perform throughout the lifetime of your project.
+This creates a new directory called `migrations`. This directory stores detailed info about each migration you perform throughout the lifetime of your project.
 
 Every migration is represented via its own directory inside the `migrations` directory. In this case, your first migration is called `TIMESTAMP-init` (e.g. `20190605165416-init`). It contains tree files:
 
@@ -55,7 +55,7 @@ To actually execute the migration against your database, run:
 prisma2 lift up
 ```
 
-This applies the steps specified in `steps.json` and therefore migrates the database schema to match the datamodel. 
+This applies the steps specified in `steps.json` and therefore migrates the database schema to match the datamodel.
 
 #### 4. Generate Photon
 
@@ -77,7 +77,7 @@ Install Node depencies:
 npm install
 ```
 
-> Note that the Photon generation is included in an [`install`](./package.json#L16) script in your [`package.json`](./package.json), which means Photon also gets (re-)generated upon each `npm install`.  
+> Note that the Photon generation is included in an [`install`](./package.json#L16) script in your [`package.json`](./package.json), which means Photon also gets (re-)generated upon each `npm install`.
 
 #### 6. Run the script
 
