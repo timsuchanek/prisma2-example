@@ -1,6 +1,7 @@
-source my_db {
-  type = "sqlite"
-  url  = "file:db/migration_engine.db"
+datasource db {
+  provider = "sqlite"
+  url      = "file:db/next.db"
+  default  = true
 }
 
 model Blog {
