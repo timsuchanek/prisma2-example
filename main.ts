@@ -13,7 +13,8 @@ async function main() {
   })
 
   console.log(result)
-  photon.disconnect()
+  
+  await photon.disconnect()
 }
 
 main().catch(e => {
