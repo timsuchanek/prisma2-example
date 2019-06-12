@@ -18,7 +18,7 @@ The first step asks you which kind of database you want to use with Photon/Lift.
 - PostgreSQL
 - MongoDB (coming very soon)
 
-When choosing **SQLite**, you can either point the Prisma CLI to an existing SQLite database file or let it create a new database file for you. With **all other options**, you'll need to provide the database connection details and credentials in the next step. 
+> When choosing **SQLite**, you can either point the Prisma CLI to an existing SQLite database file or let it create a new database file for you. With **all other options**, you'll need to provide the database connection details and credentials in the next step. 
 
 ### 2. Database credentials
 
@@ -41,8 +41,8 @@ Please provide the database connection details for your database server. If the 
 At this point, you have three options to use the Prisma tools with your successfully connected database:
 
 - Use Photon and Lift
-- Use only Photon (for database access (ORM))
-- Use only Lift (for database migrations)
+- [Use only Photon](./photon/use-only-photon.md) (for database access (ORM))
+- [Use only Lift](./lift/use-only-lift.md) (for database migrations)
 
 ### 4. Language selection (only Photon)
 
