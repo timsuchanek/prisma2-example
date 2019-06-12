@@ -62,8 +62,8 @@ For example, when the following model was generated for you through the introspe
 
 ```groovy
 model _customers {
-  id: Int
-  number_of_orders: Int
+  id Int @id
+  number_of_orders Int
 }
 ```
 
@@ -79,8 +79,8 @@ You might prefer using camel casing rather than the snake case convention used i
 
 ```groovy
 model Customer @map(name: "_customers") {
-  id: Int
-  orderCount: Int @map(name: "number_of_orders")
+  id Int @id
+  orderCount Int @map(name: "number_of_orders")
 }
 ```
 

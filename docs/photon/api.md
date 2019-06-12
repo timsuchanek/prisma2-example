@@ -15,16 +15,16 @@ Assume you have the following datamodel:
 
 ```groovy
 model User {
-  id: Int @id
-  name: String
-  role: Role
-  posts: Post[]
+  id Int @id
+  name String
+  role Role
+  posts Post[]
 }
 
 model Post {
-  id: Int @id
-  title: String
-  author: User
+  id Int @id
+  title String
+  author User
 }
 
 enum Role {
