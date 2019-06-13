@@ -33,7 +33,7 @@ With Prisma 2, database migrations are performed using the `lift` subcommand of 
 
 ##### 3.1. Create migration
 
-Run the following command to create a new migration:
+Run the following command to save a new migration:
 
 ```
 prisma2 lift create --name 'init'
