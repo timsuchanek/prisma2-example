@@ -36,7 +36,7 @@ With Prisma 2, database migrations are performed using the `lift` subcommand of 
 Run the following command to save a new migration:
 
 ```
-prisma2 lift create --name 'init'
+prisma2 lift save --name 'init'
 ```
 
 This creates a new directory called `migrations`. This directory stores detailed info about each migration you perform throughout the lifetime of your project.
