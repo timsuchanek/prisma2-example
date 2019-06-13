@@ -45,7 +45,7 @@ Then follow the interactive prompt:
 Once you're done with the interactive prompt, the CLI sets out for 3 major tasks:
 
 1. Introspecting your database schema
-1. Generating a Prisma datamodel based on the introspection
+1. Generating a Prisma schema based on the introspection
 1. Generating the Photon API in your selected language
 
 Plus, if you've selected a boilerplate to get started, it downloads the boilerplate code and configures it to connect to your database and match the generated datamodel.
@@ -56,7 +56,7 @@ To start using Photon in your application, you can import it from `node_modules/
 
 ### 4. Customize your Photon API
 
-One benefit of having the Prisma datamodel as an intermediate representation of your database schema is that lets you to _decouple_ the database schema from your data access API. For example, you can map cryptic table names to friendlier model names to be used in your API.
+One benefit of having the Prisma schema as an intermediate representation of your database schema is that lets you to _decouple_ the database schema from your data access API. For example, you can map cryptic table names to friendlier model names to be used in your API.
 
 For example, when the following model was generated for you through the introspection:
 

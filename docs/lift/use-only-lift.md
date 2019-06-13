@@ -4,7 +4,7 @@ You can use Lift as your migration system without using Photon for database acce
 
 When using Lift without Photon, there are two ways to get started:
 
-- **From scratch**: Write your declarative Prisma datamodel and map it to the database
+- **From scratch**: Write your declarative Prisma schema and map it to the database
 - **With an existing database**: Introspect your database to obtain your initial datamodel
 
 ## Getting started with Lift
@@ -34,13 +34,13 @@ Then follow the interactive prompt:
 3. Select the database (MySQL, MongoDB) or schema (PostgreSQL)
 4. Select **Only Lift**
 
-Once you're done with the interactive prompt, the CLI generates your initial Prisma datamodel which reflects your current database schema. The datamodel connects to your database by listing it as a data source.
+Once you're done with the interactive prompt, the CLI generates your initial Prisma schema which reflects your current database schema. The datamodel connects to your database by listing it as a data source.
 
 ### 3. Migrate your database with Lift
 
 Every schema migration with Lift is a 3-step-process:
 
-1. **Adjust datamodel**: Change your Prisma datamodel to match your desired schema.
+1. **Adjust datamodel**: Change your Prisma schema to match your desired schema.
 1. **Save migration**: Run `prisma lift save` to create your [migration files](./migration-files.md) on the file system.
 1. **Run migration**: Run `prisma lift up` to perform the migration against your database.
 

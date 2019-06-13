@@ -1,24 +1,24 @@
 # Introspection
 
-Prisma lets you introspect your database to derive a Prisma datamodel from the current schema. Introspection is available via two CLI commands:
+Prisma lets you introspect your database to derive a Prisma schema from the current schema. Introspection is available via two CLI commands:
 
 - `prisma init`: Interactive wizard helping to connect to a database and introspect it. Typically used when starting to use Prisma with an existing database.
 - `prisma introspect`: Assumes Prisma is already connected to your database and (re)introspects it for you. Typically used in [Photon-only](./photon/use-only-photon.md) projects where migrations are performed not via Lift, so the datamodel needs to be updated manually after each schema change.
 
 ## Conventions
 
-As database schemas are likely to look very different per project, Prisma employs a number of conventions for translating a database schema into a Prisma datamodel.
+As database schemas are likely to look very different per project, Prisma employs a number of conventions for translating a database schema into a Prisma schema.
 
 ### Models
 
-- Tables/collections names are normalized to [PascalCasing](http://wiki.c2.com/?PascalCase) (camelCase with uppercase initial letter) in the Prisma datamodel.
-- Tables/collections named in ALL UPPERCASE letters, will remain ALL UPPERCASED in the Prisma datamodel.
+- Tables/collections names are normalized to [PascalCasing](http://wiki.c2.com/?PascalCase) (camelCase with uppercase initial letter) in the Prisma schema.
+- Tables/collections named in ALL UPPERCASE letters, will remain ALL UPPERCASED in the Prisma schema.
 - If a normalized model name conflicts with the name of another model or scalar, normalization is skipped.
 
 ### Field names
 
-- Tables/collections names are normalized to [camelCasing](http://wiki.c2.com/?CamelCase) in the Prisma datamodel.
-- Columns/fields named in ALL UPPERCASE letters, will remain ALL UPPERCASED in the Prisma datamodel.
+- Tables/collections names are normalized to [camelCasing](http://wiki.c2.com/?CamelCase) in the Prisma schema.
+- Columns/fields named in ALL UPPERCASE letters, will remain ALL UPPERCASED in the Prisma schema.
 - If a normalized field with the same normalized name already exists, normalization is skipped.
 
 ### Embedded types

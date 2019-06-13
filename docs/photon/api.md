@@ -1,12 +1,12 @@
 # Generated Photon API (JavaScript/TypeScript)
 
-Photon is a type-safe database client auto-generated based on the Prisma datamodel (which is a representation of your database schema). This page explains the generated API operations you have available when using Photon.
+Photon is a type-safe database client auto-generated based on the Prisma schema (which is a representation of your database schema). This page explains the generated API operations you have available when using Photon.
 
 ## Overview
 
 Using Photon typically follows this high-level workflow:
 
-1. Update your Prisma datamodel (e.g. by manually adding a new model or by (re)introspecting your database)
+1. Update your Prisma schema (e.g. by manually adding a new model or by (re)introspecting your database)
 2. Generate your Photon database client based on the changes in the datamodel
 
 Your `Photon` instance can then be imported from `node_modules/@generated`. 
