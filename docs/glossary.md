@@ -24,6 +24,8 @@ You can include various generators in your [project definition](#project-definit
 
 ### Lift
 
+A declarative database migration system.
+
 ### Migration
 
 ### Migration engine
@@ -38,7 +40,11 @@ Defines the strucure of your application data.
 
 ### Nested write
 
+Photon lets you perform nested inserts and updates for related models. A nested write is always performed as an atomic transaction. 
+
 ### Photon
+
+An auto-generated type-safe database client. Some people call it an ORM. 
 
 ### Project definition
 
@@ -50,6 +56,6 @@ The Prisma project definition specifies the main parts of your Prisma project:
 
 ### Query engine
 
-#### Record
+### Record
 
 ### Transaction
