@@ -1,12 +1,12 @@
 datasource db {
   provider = "sqlite"
-  url      = "file:db/next.db"
+  url      = "file:dev.db"
   default  = true
 }
 
 generator photon {
-  provider = "javascript"
-  output   = "node_modules/@generated/photon"
+  provider = "photon-js"
+  output   = "./generated/photon"
 }
 
 model Blog {
