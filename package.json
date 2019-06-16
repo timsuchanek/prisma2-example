@@ -13,6 +13,6 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --no-notify main.ts",
     "start": "ts-node main.ts",
-    "install": "prisma2 generate || echo \"\""
+    "install": "prisma2 lift save --name \"setup\" && prisma2 lift up && prisma2 generate"
   }
 }
