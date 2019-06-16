@@ -13,7 +13,7 @@ async function main() {
   })
 
   console.log(result)
-  
+
   await photon.disconnect()
 }
 
