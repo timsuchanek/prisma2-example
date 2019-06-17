@@ -5,8 +5,7 @@ datasource db {
 }
 
 generator photon {
-  provider = "photon-js"
-  output   = "./generated/photon"
+  provider = "photonjs"
 }
 
 model Blog {

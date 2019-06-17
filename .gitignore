@@ -3,5 +3,3 @@ migrations
 node_modules
 .DS_Store
 failed-*.md
-@generated
-prisma/generated
