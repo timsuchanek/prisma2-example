@@ -1,0 +1,20 @@
+{
+  "version": "0.0.97",
+  "steps": [
+    {
+      "stepType": "CreateField",
+      "model": "Blog",
+      "name": "viewCount2",
+      "type": {
+        "Base": "Int"
+      },
+      "arity": "required",
+      "isUnique": false
+    },
+    {
+      "stepType": "DeleteField",
+      "model": "Blog",
+      "name": "viewCount"
+    }
+  ]
+}

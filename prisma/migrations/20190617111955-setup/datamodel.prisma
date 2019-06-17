@@ -5,21 +5,13 @@ datasource db {
 }
 
 generator photon {
-  provider = "photonjs"
-}
-
-generator nexusThingy {
-  provider = "nexus-prisma"
-}
-
-generator otherThingy {
-  provider = "prisma-test-utils"
+  provider = "photon-js"
 }
 
 model Blog {
   id        Int      @id
   name      String
-  viewCount2 Int
+  viewCount Int
   posts     Post[]
   authors   Author[]
 }
